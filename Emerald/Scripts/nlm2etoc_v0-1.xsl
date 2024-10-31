@@ -543,7 +543,7 @@
 			<xsl:value-of select="concat('ER',format-number(position(),'000000000'))"/>
 			<xsl:text>&lt;/ID&gt;&lt;ITEM UIN&gt;Z000000000&lt;/ITEM UIN&gt;&lt;SHM&gt;</xsl:text>
 			<xsl:value-of select="if (./*:front/*:journal-meta/*:issn[@publication-format='print'][text()!='']) 
-						  then fn:issn2sm(./*:front/*:journal-meta/*:issn[@publication-format='print'][text()!=''])[1] else '0000.000000000'"/>
+						  then fn:issn2sm(./*:front/*:journal-meta/*:issn[@publication-format='print'][text()!=''])[1] else '0000.000000'"/>
 			<xsl:text>&lt;/SHM&gt;&lt;ISSUE&gt;</xsl:text>
 			<xsl:value-of select="(./*:front/*:article-meta/*:pub-date[@publication-format='print']/*:year)[1]"/>
 			<xsl:if test="./*:front/*:article-meta/*:volume[text()!='']">
